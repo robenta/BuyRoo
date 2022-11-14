@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Profile {% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container-fluid shadow-sm p-3 mb-5 bg-body rounded" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <hr>
+        <h3 style="text-align: center;">Personal information </h3>
+        First Name : {{user.first_name}} <br>
+        Last Name : {{user.last_name}} <br>
+        Username : {{user.username}} <br>
+        Email : {{user.user.email}} <br>
+        Phone Number : {{user.phone}} <br>
+        <form method="POST"  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" action="{% url 'password' %}">
+          {% csrf_token %}
+          <div class="form-group">
+              {{form.as_p}}
+              Change your password : <button type="submit" class="btn-outline">Change</button>
+          </div>
+        </form>
+    </div>  
+</div>
+
+
+{% endblock content %}
+

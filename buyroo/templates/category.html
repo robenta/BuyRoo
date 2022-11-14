@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  Single Category
+{% endblock title %}
+
+
+{% block content %}
+<div class="container-fluid pt-5">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 m-5">
+        {% if category %}
+            {% for item in category %}
+                <div class="col">
+                    <div class="card">
+                        <img src="{{item.image.url}}" class="card-img w-50 mx-auto mt-4">
+                        <div class="card-body mt-5">
+                            <h5 class="card-text">{{item.name}}<h5>
+                            <h5 class="card-title"> &#8358 {{item.price}}</h5>
+                            <a href="" class="btn">ADD TO CART</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
