@@ -7,7 +7,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 #django always adds an 'id' so you must always add it.
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'category', 'name', 'price', 'max','image', 'description', 'featured', 'latest', 'available', 'min')
+    list_display = ('id', 'category', 'name', 'price', 'max','image', 'description', 'featured', 'latest', 'available', 'women_dress', 'women_blouse', 'boy_shirt', 'boy_pant', 'men_jacket', 'men_trench', 'girl_dress', 'girl_skirt', 'min', 'max')
 
 class ShopCartAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'product', 'basket_no', 'quantity', 'paid_order')

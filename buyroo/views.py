@@ -20,13 +20,35 @@ def index(request):
     featured = Product.objects.filter(featured=True)
     latest = Product.objects.filter(latest=True)
     available = Product.objects.filter(available=True)
+    women_dress = Product.objects.filter(women_dress=True)
+    girl_dress = Product.objects.filter(girl_dress=True)
+    boy_shirt = Product.objects.filter(boy_shirt=True)
+    women_blouse = Product.objects.filter(women_blouse=True)
+    girl_skirt = Product.objects.filter(girl_skirt=True)
+    men_trench = Product.objects.filter(men_trench=True)
+    boy_pant = Product.objects.filter(boy_pant=True)
+    men_jacket = Product.objects.filter(men_jacket=True)
     categories = Category.objects.all()
+    children = Category.objects.filter(children=True)
+    men = Category.objects.filter(men=True)
+    women = Category.objects.filter(women=True)
 
     context = {
-        'featured':featured,
-        'latest':latest,
-        'available':available,
-        'categories':categories,
+        'featured': featured,
+        'latest': latest,
+        'available': available,
+        'categories': categories,
+        'women_dress': women_dress,
+        'women_blouse': women_blouse,
+        'men_jacket': men_jacket,
+        'men_trench': men_trench,
+        'girl_dress': girl_dress,
+        'girl_skirt': girl_skirt,
+        'boy_shirt': boy_shirt,
+        'boy_pant': boy_pant,
+        'children': children,
+        'women': women,
+        'men': men,
     }
 
     return render(request, 'index.html', context)

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
 html{
     background-color: #FFDBCC;
@@ -7,6 +9,7 @@ html{
 /* *{
     border: 1px solid red;
 } */
+
 /* mobile */
 @media screen 
 and (max-width : 480px){
@@ -90,6 +93,7 @@ and (max-device-width : 513px) {
         display: none;
     }
 }
+/* card view for tab */
 @media screen 
 and (min-device-width : 513px) 
 and (max-device-width : 740px) {
@@ -103,6 +107,7 @@ and (max-device-width : 740px) {
         display: block !important;
     }
 }
+/* tab */
 @media only screen 
 and (min-device-width : 540px) 
 and (max-device-width : 1000px) {    
@@ -168,6 +173,9 @@ and (max-device-width : 1000px) {
     .searchform{
         width: 650px;
     }
+    .partners{
+        display: block;
+    }
     .index2{
         display: none;
     }
@@ -226,11 +234,11 @@ and (max-device-width : 1000px) {
 .nav-item a{
     color: black;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;    
     text-transform: uppercase;
 }
 .nav-item a:hover{
-    color: #992e00;
+    color: inherit;
 }
 .dropdown-menu{
     background-color: #FFDBCC;
@@ -264,9 +272,17 @@ and (max-device-width : 1000px) {
 .btn{
     background-color: black;
     color: white;
+    font-family: 'Karla', sans-serif;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
+}
+.btn i{
+    color: white;
+    font-size: 15px;
+}
+.btn i:hover{
+    color: white;
 }
 .btn:hover{
     background-color: #992e00;
@@ -286,12 +302,12 @@ and (max-device-width : 1000px) {
 #btn1 i{
     background-color: white;
     color: black;
-    font-size: 13px;
+    font-size: 12px;
     border-color: rgb(141, 139, 139);
 }
 
 .searchform,:placeholder-shown{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;    
     font-weight: lighter;
     letter-spacing: 1px;
     color: #992e00;
@@ -299,6 +315,7 @@ and (max-device-width : 1000px) {
 }
 .subheads{
     font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 50px;
 }
 .hr{
@@ -314,17 +331,20 @@ and (max-device-width : 1000px) {
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 400;
+    font-family: 'Karla', sans-serif;
     padding: 10px;
     text-align: start;
 }
 .card-text{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
+    font-family: 'Karla', sans-serif;
 }
 .card-title{
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
+    font-family: 'Karla', sans-serif;
 }
 .card i{
     font-size: 20px;
@@ -332,6 +352,16 @@ and (max-device-width : 1000px) {
 .card:hover{
     transform: scale(1.02) !important;
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 10px rgba(0,0,0,.06);
+}
+.partners{
+    height: 30vh;
+}
+.partners img{
+    width: 100%;
+    height: 15vh;
+    justify-content: center;
+    margin-top: 40px !important;
+    margin-bottom: 20px;
 }
 
 
@@ -369,6 +399,7 @@ and (max-device-width : 1000px) {
 .imagecontainer {
     position: relative; 
 }
+
 .footer{
     background-color: #FFDBCC;
 }
@@ -381,12 +412,15 @@ and (max-device-width : 1000px) {
 .footer h1{
     padding-right: 40px;
     margin-top: 30px;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 35px;
+    font-family: 'Roboto', sans-serif;
 }
 .footer h4{
     text-align: start;
     font-size: 20px;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;    
 }
 .footer a{
     text-decoration: none;
@@ -397,6 +431,7 @@ and (max-device-width : 1000px) {
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 400;
+    font-family: 'Karla', sans-serif;    
     padding: 7px;
     text-align: start;
 }
@@ -404,6 +439,7 @@ and (max-device-width : 1000px) {
     text-transform: none !important;
     font-weight: 400;
     padding: 7px;
+    font-family: 'Karla', sans-serif;    
 }
 .footer .contact .icons i{
     font-size: 20px;
@@ -426,12 +462,15 @@ and (max-device-width : 1000px) {
 }
 .footer2 h1{
     margin-top: 30px;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 35px;
+    font-family: 'Roboto', sans-serif;
 }
 .footer2 h4{
     text-align: start;
     font-size: 20px;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;    
 }
 .footer2 a{
     text-decoration: none;
@@ -442,12 +481,14 @@ and (max-device-width : 1000px) {
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 400;
+    font-family: 'Karla', sans-serif;    
     padding: 7px;
     text-align: start;
 }
 .footer2 .contact ul li{
     text-transform: none !important;
     font-weight: 400;
+    font-family: 'Karla', sans-serif;    
     padding: 7px;
 }
 .footer2 .contact .icons i{
@@ -460,6 +501,7 @@ and (max-device-width : 1000px) {
     margin-top: 10px;
     text-align: center !important;
 }
+
 .footer3{
     background-color: #FFDBCC;
 }
@@ -471,12 +513,15 @@ and (max-device-width : 1000px) {
 }
 .footer3 h1{
     margin-top: 30px;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 35px;
+    font-family: 'Roboto', sans-serif;
 }
 .footer3 h4{
     text-align: start;
     font-size: 20px;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;    
 }
 .footer3 a{
     text-decoration: none;
@@ -487,12 +532,14 @@ and (max-device-width : 1000px) {
     text-transform: capitalize;
     font-size: 12.5px;
     font-weight: 400;
+    font-family: 'Karla', sans-serif;    
     padding: 7px;
     text-align: start;
 }
 .footer3 .contact ul li{
     text-transform: none !important;
     font-weight: 400;
+    font-family: 'Karla', sans-serif;    
     padding: 7px;
 }
 .footer3 .contact .icons i{
@@ -508,12 +555,20 @@ and (max-device-width : 1000px) {
 
 .design {
     background-color: black;
+    font-family: 'Karla', sans-serif;  
 }
-.design a, p{
+.design a{
     text-decoration: none;
     color: white;
     line-height: 10px;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.design p{
+    color: white;
+    line-height: 10px;
+    font-size: 14px;
+    font-weight: 400;
 }
 .design a{
     text-decoration: none;
@@ -524,12 +579,20 @@ and (max-device-width : 1000px) {
 }
 .design2 {
     background-color: black;
+    font-family: 'Karla', sans-serif;    
 }
-.design2 a, p{
+.design2 a{
     text-decoration: none;
     color: white;
     line-height: 10px;
-    font-size: 12px;
+    font-size: 12.5px;
+    font-weight: 400;
+}
+.design2 p{
+    color: white;
+    line-height: 10px;
+    font-size: 12.5px;
+    font-weight: 400;
 }
 .design2 a{
     text-decoration: none;

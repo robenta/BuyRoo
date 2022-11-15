@@ -35,6 +35,58 @@
     </div>
 
     <div class="container-fluid p-4 pb-0">
+      <h1 class="subheads">Children</h1>
+      <hr>
+    </div>
+    <div class="row row-cols-md-3 row-cols-lg-4 g-2 m-4 p-0 mt-0">
+      {% if boy_shirt %}
+      {% for item in boy_shirt %}
+      <div class="col">
+        <div class="card">
+          <img src="{{item.image.url}}" class="card-img mx-auto mt-4">
+          <div class="card-body mt-5">
+            <h5 class="card-text">{{item.name}}<h5>
+            <h5 class="card-title"> &#8358 {{item.price}}</h5>
+            <div class="d-inline-flex m-auto">
+              <a href="" class="btn">Add to cart</a>
+            </div>
+            <div class="d-inline-flex m-auto">
+              <a href="" class="btn" id="btn1"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="container-fluid p-4 pb-0">
+      <h1 class="subheads">Men</h1>
+      <hr>
+    </div>
+    <div class="row row-cols-md-3 row-cols-lg-4 g-2 m-4 p-0 mt-0">
+      {% if children %}
+      {% for item in children %}
+      <div class="col">
+        <div class="card">
+          <img src="{{item.image.url}}" class="card-img mx-auto mt-4">
+          <div class="card-body mt-5">
+            <h5 class="card-text">{{item.name}}<h5>
+            <h5 class="card-title"> &#8358 {{item.price}}</h5>
+            <div class="d-inline-flex m-auto">
+              <a href="" class="btn">Add to cart</a>
+            </div>
+            <div class="d-inline-flex m-auto">
+              <a href="" class="btn" id="btn1"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="container-fluid p-4 pb-0">
       <h1 class="subheads">Available Products</h1>
       <hr>
     </div>
@@ -86,10 +138,39 @@
       {% endif %}
     </div>
   </div>
-
+  <!-- <div class="container-fluid partners">
+    <div class="container-fluid p-4 pb-0">
+      <h1 class="subheads">Brands</h1>
+      <hr>
+    </div>
+    <div class="row row-cols-md-3 row-cols-lg-6 g-2 text-center">
+      <div class="col">
+        <img src="{% static '/img/topshop.png' %}" alt="brand_logo">
+      </div>
+      <div class="col">
+        <img src="{% static '/img/chanel_logo_PNG1.png' %}" alt="brand_logo">
+      </div>
+      <div class="col">
+        <img src="{% static '/img/Coach_logo_PNG5.png' %}" alt="brand_logo">
+      </div>
+      <div class="col">
+        <img src="{% static '/img/Crocs_logo_PNG3.png' %}" alt="brand_logo">
+      </div>
+      <div class="col">
+        <img src="{% static 'img/Louis_Vuitton_logo_PNG12.png' %}" alt="brand_logo">
+      </div>
+      <div class="col">
+        <img src="{% static '/img/Bershka_logo_PNG1.png' %}" alt="brand_logo">
+      </div>
+    </div>
+  </div> -->
 
   <div class="container-fluid mt-5 mb-5 index2">
-    <h1 class="subheads">All categories</h1>
+    <div class="container-fluid p-1 pb-0">
+      <h1 class="subheads">All categories</h1>
+      <hr>
+    </div> 
+
     <div class="row row-cols-3 mb-5 justify-content-center">
       {% if categories %}
       {% for item in categories %}
@@ -127,6 +208,7 @@
     </div>
     
     <h1 class="subheads">Featured Products</h1>
+    <hr>
     <div class="row row-cols-2">
       {% if featured %}
       {% for item in featured %}
@@ -150,6 +232,7 @@
     </div>
 
     <h1 class="subheads">Available Products</h1>
+    <hr> 
     <div class="row row-cols-2">
       {% if available %}
       {% for item in available %}
@@ -174,6 +257,7 @@
 
     
     <h1 class="subheads">Latest Arrivals</h1>
+    <hr>
     <div class="row row-cols-2">
       {% if latest %}
       {% for item in latest %}
@@ -200,7 +284,7 @@
 
   <div class="container-fluid mt-5 mb-5 tabindex">    
     <div class="container-fluid p-1 pb-0">
-      <h1 class="subheads">Featuresssssssd Products</h1>
+      <h1 class="subheads">Featured Products</h1>
       <hr>
     </div>    
     <div class="row row-cols-2 g-2 p-0 mt-0">
